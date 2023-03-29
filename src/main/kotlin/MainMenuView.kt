@@ -1,6 +1,7 @@
 import tornadofx.*
 
-class MainMenuView : View("My View") {
+
+class MainMenuView : View("FirstTry") {
     override val root = borderpane {
         prefWidth = 800.0
         prefHeight = 600.0
@@ -10,7 +11,7 @@ class MainMenuView : View("My View") {
                 alignment = javafx.geometry.Pos.CENTER
             }
 
-            label("Titre du jeu") {
+            label("Que voulez-vous faire ?") {
                 style {
                     fontSize = 40.px
                 }
@@ -27,14 +28,25 @@ class MainMenuView : View("My View") {
                 }
             }
 
-            button("Options") {
+            button("Charger partie") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
 
                 setOnAction {
-                    // Code pour afficher les options du jeu
+                    // Code pour démarrer une nouvelle partie
+                }
+            }
+
+            button("Options") {
+                style {
+                    prefWidth = 200.px
+                    fontSize = 20.px
+                }
+
+                action {
+                    openInternalWindow<OptionsView>(modal = true)
                 }
             }
 
