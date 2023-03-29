@@ -1,10 +1,13 @@
 
+import LanguageManager.selectedLanguage
+import javafx.collections.FXCollections
 import tornadofx.*
-import java.util.*
 
 class OptionsView : View("Options") {
+
     private val audioManager = AudioManager()
-    private val langManager = LanguageManager
+    private val languageManager = LanguageManager
+    val currentMainMenuView: MainMenuView by param()
 
     override val root = vbox {
         spacing = 10.0
@@ -23,24 +26,25 @@ class OptionsView : View("Options") {
 
         hbox {
             label("Langue : ")
-            val languages = listOf("Français", "Anglais")
-            combobox<String> {
-                items = observableListOf(languages)
+            combobox<Language>(selectedLanguage) {
+                items = FXCollections.observableArrayList(Language.ENGLISH, Language.FRENCH)
+                cellFormat { text = it.toString() }
                 valueProperty().addListener { _, _, newValue ->
-                    when(newValue) {
-                        "Français" -> {langManager.setLanguage(Locale("fr", "FR"))}
-                        "Anglais" -> {langManager.setLanguage(Locale("en", "EN"))}
-                    }
+                    LanguageManager.setLanguage(newValue)
                 }
             }
         }
+
 
         button("Enregistrer") {
             style {
                 prefWidth = 100.px
                 fontSize = 16.px
             }
-            action {close()}
+            action {
+                // AJOUTER CODE POUR VALIDER LES CHANGEMENTS ICI
+                close()
+            }
         }
     }
 }

@@ -1,21 +1,28 @@
+
 import tornadofx.*
 
-class MainMenuView : View("FirstTry") {
+class MainMenuView : View("Main Menu") {
+    private val menuTitleText = "main_menu_title"
+    private val newGameButtonText = "new_game"
+    private val optionsButtonText = "options"
+    private val exitButtonText = "exit"
+
     override val root = borderpane {
-        val langManager = LanguageManager
         prefWidth = 800.0
         prefHeight = 600.0
+
         center = vbox(20) {
             style {
                 padding = box(50.px)
                 alignment = javafx.geometry.Pos.CENTER
             }
 
-            val playText = langManager.getString("menu_title_text")
+            label(menuTitleText.toString()) {
+                id = "menuTitle"
+                style { fontSize = 40.px }
+            }
 
-            label(playText) {style {fontSize = 40.px}}
-
-            button("Nouvelle partie") {
+            button(newGameButtonText.toString()) {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
@@ -28,28 +35,26 @@ class MainMenuView : View("FirstTry") {
                 }
             }
 
-            button("Charger partie") {
+            button(optionsButtonText.toString()) {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                setOnAction {close()}
+                action {
+                    find<OptionsView>(
+                        mapOf(
+                            OptionsView::currentMainMenuView to this@MainMenuView
+                        )
+                    ).openModal()
+                }
             }
 
-            button("Options") {
+            button(exitButtonText.toString()) {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                action {openInternalWindow<OptionsView>(modal = true)}
-            }
-
-            button("Quitter") {
-                style {
-                    prefWidth = 200.px
-                    fontSize = 20.px
-                }
-                action {close()}
+                setOnAction { close() }
             }
         }
     }

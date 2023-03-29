@@ -4,20 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d84cb1ab-2a74-4e38-a364-38c4542e4a70" name="Changes" comment="Version 0.1.0&#10;-------------&#10;Changes made :&#10;- Updated imports&#10;- Added Full-Screen at launch&#10;- Modified main label and MainMenuView title&#10;- Added OptionsView&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Configure exit button&#10;- Make options workable&#10;- Start creating the game interface">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/AudioManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Game.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LanguageManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/MainGameView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Player.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Bundle_en_EN.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Bundle_fr_FR.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/styles.css" afterDir="false" />
+    <list default="true" id="d84cb1ab-2a74-4e38-a364-38c4542e4a70" name="Changes" comment="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added styles.css&#10;- Added AudioManager&#10;- Added Game.kt for game logic&#10;- Added LanguageManager&#10;- Started creation of game interface&#10;- Started english translation&#10;- Exit button is now workable&#10;- Volume should now be workable&#10;- Difficulty mode have been deleted&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Continue game interface&#10;- Start to fill Player.kt">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/Const.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/en_EN.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/fr_FR.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/settings.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/LanguageManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/LanguageManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainGameView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MainGameView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainMenuView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MainMenuView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/OptionsView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/OptionsView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Bundle_en_EN.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Bundle_fr_FR.properties" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,26 +74,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Pierr/IdeaProjects/FirstTry/src/main/resources/bundles",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.4218391",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pierr/IdeaProjects/FirstTry/src/main/resources/bundles&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.4218391&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="" />
@@ -104,8 +103,8 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main\resources" />
-      <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main\kotlin" />
       <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main" />
+      <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main\kotlin" />
       <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main\views" />
       <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main\kotlin\views" />
     </key>
@@ -124,7 +123,9 @@
       <workItem from="1680046777719" duration="1015000" />
       <workItem from="1680047887038" duration="3737000" />
       <workItem from="1680056127122" duration="7535000" />
-      <workItem from="1680063770505" duration="6604000" />
+      <workItem from="1680063770505" duration="7324000" />
+      <workItem from="1680093482477" duration="3365000" />
+      <workItem from="1680098648233" duration="24419000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1680048644131</created>
@@ -147,7 +148,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680051592758</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added styles.css&#10;- Added AudioManager&#10;- Added Game.kt for game logic&#10;- Added LanguageManager&#10;- Started creation of game interface&#10;- Started english translation&#10;- Exit button is now workable&#10;- Volume should now be workable&#10;- Difficulty mode have been deleted&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Continue game interface&#10;- Start to fill Player.kt">
+      <created>1680071158087</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1680071158087</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,7 +165,9 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Base" />
     <MESSAGE value="Version 0.1.0&#10;-------------&#10;Changes made :&#10;- Updated imports&#10;- Added Full-Screen at launch&#10;- Modified main label and MainMenuView title&#10;- Added OptionsView&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Configure exit button&#10;- Make options workable&#10;- Start creating the game interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.1.0&#10;-------------&#10;Changes made :&#10;- Updated imports&#10;- Added Full-Screen at launch&#10;- Modified main label and MainMenuView title&#10;- Added OptionsView&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Configure exit button&#10;- Make options workable&#10;- Start creating the game interface" />
+    <MESSAGE value="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added styles.css&#10;- Added AudioManager&#10;- Added Game.kt for game logic&#10;- Added LanguageManager&#10;- Started creation of game interface&#10;- Started english translation&#10;- Exit button is now workable&#10;- Volume should now be workable&#10;- Difficulty mode have been deleted&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Start to fill Player.kt" />
+    <MESSAGE value="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added styles.css&#10;- Added AudioManager&#10;- Added Game.kt for game logic&#10;- Added LanguageManager&#10;- Started creation of game interface&#10;- Started english translation&#10;- Exit button is now workable&#10;- Volume should now be workable&#10;- Difficulty mode have been deleted&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Continue game interface&#10;- Start to fill Player.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added styles.css&#10;- Added AudioManager&#10;- Added Game.kt for game logic&#10;- Added LanguageManager&#10;- Started creation of game interface&#10;- Started english translation&#10;- Exit button is now workable&#10;- Volume should now be workable&#10;- Difficulty mode have been deleted&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Continue game interface&#10;- Start to fill Player.kt" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
