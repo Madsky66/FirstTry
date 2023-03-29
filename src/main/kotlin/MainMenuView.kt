@@ -1,8 +1,8 @@
 import tornadofx.*
 
-
 class MainMenuView : View("FirstTry") {
     override val root = borderpane {
+        val langManager = LanguageManager
         prefWidth = 800.0
         prefHeight = 600.0
         center = vbox(20) {
@@ -11,20 +11,20 @@ class MainMenuView : View("FirstTry") {
                 alignment = javafx.geometry.Pos.CENTER
             }
 
-            label("Que voulez-vous faire ?") {
-                style {
-                    fontSize = 40.px
-                }
-            }
+            val playText = langManager.getString("menu_title_text")
+
+            label(playText) {style {fontSize = 40.px}}
 
             button("Nouvelle partie") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-
                 setOnAction {
-                    // Code pour démarrer une nouvelle partie
+                    val game = Game()
+                    val gameView = find<MainGameView>()
+                    gameView.game = game
+                    replaceWith(gameView)
                 }
             }
 
@@ -33,10 +33,7 @@ class MainMenuView : View("FirstTry") {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-
-                setOnAction {
-                    // Code pour démarrer une nouvelle partie
-                }
+                setOnAction {close()}
             }
 
             button("Options") {
@@ -44,10 +41,7 @@ class MainMenuView : View("FirstTry") {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-
-                action {
-                    openInternalWindow<OptionsView>(modal = true)
-                }
+                action {openInternalWindow<OptionsView>(modal = true)}
             }
 
             button("Quitter") {
@@ -55,26 +49,8 @@ class MainMenuView : View("FirstTry") {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-
-                setOnAction {
-                    // Code pour quitter le jeu
-                }
+                action {close()}
             }
         }
     }
-}
-
-class MasterView: View() {
-    override val root = borderpane {
-        top<TopView>()
-        bottom<BottomView>()
-    }
-}
-
-class TopView: View() {
-    override val root = label("Top View")
-}
-
-class BottomView: View() {
-    override val root = label("Bottom View")
 }

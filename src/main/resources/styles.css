@@ -1,0 +1,38 @@
+.root {
+    -fx-font-size: 14pt;
+    -fx-background-color: #f0f0f0;
+}
+
+.label {
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: #4286f4;
+    -fx-text-fill: white;
+}
+
+.text-input {
+    -fx-background-color: #ffffff;
+}
+
+.combo-box {
+    -fx-background-color: #ffffff;
+    -fx-font-size: 14pt;
+    -fx-font-family: "Arial";
+}
+
+.slider {
+    -fx-control-inner-background: #ffffff;
+    -fx-font-size: 14pt;
+}
+
+.toggle-button {
+    -fx-font-size: 14pt;
+    -fx-background-color: #4286f4;
+    -fx-text-fill: white;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #f4a042;
+}
