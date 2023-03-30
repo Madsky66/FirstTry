@@ -2,39 +2,29 @@ import tornadofx.*
 
 class MainGameView : View("My Game") {
     var game = Game()
+    private val scoreLabel = label("Score: ${game.score}")
+    private val livesLabel = label("Lives: ${game.lives}")
 
     override val root = vbox {
-        val healthText = "healthText"
-        val moveRightText = "moveRightText"
-
-        label("Score : ${game.score}")
-        label("$healthText : ${game.lives}")
-
-        button(moveRightText) {
+        scoreLabel
+        livesLabel
+        button("Move Left") {
+            action {
+                game.performPlayerAction(Game.PlayerAction.MOVE_LEFT)
+                updateLabels()
+            }
+        }
+        button("Move Right") {
             style {
                 prefWidth = 200.px
                 fontSize = 20.px
             }
             setOnAction { close() }
         }
+    }
 
-        button {
-            action {
-                game.performPlayerAction(Game.PlayerAction.MOVE_RIGHT)
-            }
-        }
-
-        fun updateView() {
-            root.children.clear()
-            root.add(label("Score: ${game.score}"))
-            root.add(label("Lives: ${game.lives}"))
-            root.add(button("Move Left") {
-                action {
-                    game.performPlayerAction(Game.PlayerAction.MOVE_LEFT)
-                    updateView()
-                }
-            })
-            //replaceWith(VictoryView::class)
-        }
+    private fun updateLabels() {
+        scoreLabel.text = "Score: ${game.score}"
+        livesLabel.text = "Lives: ${game.lives}"
     }
 }

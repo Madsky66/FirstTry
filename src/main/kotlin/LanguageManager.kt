@@ -1,27 +1,18 @@
-
-import javafx.beans.property.SimpleObjectProperty
-import java.io.File
+import SettingsManager.settingsManager
 import java.io.FileInputStream
-import java.io.FileOutputStream
 import java.util.*
 
-enum class Language(val fileName: String, val locale: Locale) {FRENCH("fr_FR.properties", Locale.FRENCH), ENGLISH("en_EN.properties", Locale.ENGLISH)}
-
 object LanguageManager {
-    val selectedLanguage = SimpleObjectProperty(Language.ENGLISH)
-    private val languageProperties = Properties()
-
-    init {loadSelectedLanguageProperties()}
-
-    private fun loadSelectedLanguageProperties() {FileInputStream("src/main/resources/${selectedLanguage.get().fileName}").use {languageProperties.load(it)}}
-
-    fun setLanguage(language: Language) {
-        selectedLanguage.set(language)
-        loadSelectedLanguageProperties()
+    private lateinit var languageInputStream: String
+    val languageManager = Properties()
+    fun check() {
+        SettingsManager.load()
+        val currentLanguage = settingsManager.getProperty("language", "fr_FR").toString()
+        if (currentLanguage == "french") {languageInputStream = "src/main/resources/fr_FR.properties"}
+        if (currentLanguage == "english") {languageInputStream = "src/main/resources/en_EN.properties"}
     }
-
-    fun save() {
-        val file = File("src/main/resources/settings.properties")
-        FileOutputStream(file).use { languageProperties.store(it, null) }
+    fun load() {
+        check()
+        FileInputStream(languageInputStream).use {languageManager.load(it)}
     }
 }

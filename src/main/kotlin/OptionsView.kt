@@ -1,12 +1,16 @@
 
-import LanguageManager.selectedLanguage
-import javafx.collections.FXCollections
+import SettingsManager.settingsManager
+import javafx.beans.property.SimpleStringProperty
 import tornadofx.*
+
 
 class OptionsView : View("Options") {
 
+    private val selectedLanguageProperty = SimpleStringProperty()
+    private var selectedLanguage: String by selectedLanguageProperty
+    private var selectedVolume by property<Int>()
     private val audioManager = AudioManager()
-    private val languageManager = LanguageManager
+
     val currentMainMenuView: MainMenuView by param()
 
     override val root = vbox {
@@ -17,24 +21,19 @@ class OptionsView : View("Options") {
 
         hbox {
             label("Volume : ")
-            slider {
-                min = 0.0
-                max = 100.0
-                valueProperty().addListener {_, _, newValue -> audioManager.setMasterVolume(newValue.toDouble() / 100.0)}
-            }
-        }
-
-        hbox {
-            label("Langue : ")
-            combobox<Language>(selectedLanguage) {
-                items = FXCollections.observableArrayList(Language.ENGLISH, Language.FRENCH)
-                cellFormat { text = it.toString() }
-                valueProperty().addListener { _, _, newValue ->
-                    LanguageManager.setLanguage(newValue)
+            slider(0, 100, selectedVolume) {
+                valueProperty().addListener { _, _, newVolume ->
+                    audioManager.setMasterVolume(newVolume.toDouble() / 100.0)
+                    selectedVolume = newVolume?.toInt()
                 }
             }
         }
 
+        hbox {
+            selectedLanguage = settingsManager.getProperty("language", "french") ?: "french"
+            label("Langue : ")
+            combobox(values = listOf("english", "french")) {valueProperty().bindBidirectional(selectedLanguageProperty)}
+        }
 
         button("Enregistrer") {
             style {
@@ -42,9 +41,10 @@ class OptionsView : View("Options") {
                 fontSize = 16.px
             }
             action {
-                // AJOUTER CODE POUR VALIDER LES CHANGEMENTS ICI
+                SettingsManager.modify(selectedVolume, selectedLanguageProperty.value, true)
                 close()
             }
         }
     }
+    init {selectedVolume = settingsManager.getProperty("volume", "50")?.toInt() ?: 50}
 }

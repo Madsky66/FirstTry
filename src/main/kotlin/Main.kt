@@ -3,7 +3,9 @@ import tornadofx.*
 
 class Main : App(MainMenuView::class) {
     init {
-        var currentLanguage: String = Language.FRENCH.toString()
+        SettingsManager.load()
+        LanguageManager.load()
+        LanguageManager.check()
         importStylesheet("/styles.css")
     }
     override fun start(stage: Stage) {
