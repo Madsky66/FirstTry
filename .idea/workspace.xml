@@ -4,16 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d84cb1ab-2a74-4e38-a364-38c4542e4a70" name="Changes" comment="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added Const.kt&#10;- Added settings.properties&#10;- Converted language bundles into properties&#10;- Updated LanguageManager and associated files&#10;- &#10;&#10;Changes to do :&#10;- Fix LanguageManager and associated methods&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Continue game interface&#10;- Start to fill Player.kt">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/SettingsManager.kt" afterDir="false" />
+    <list default="true" id="d84cb1ab-2a74-4e38-a364-38c4542e4a70" name="Changes" comment="Version 0.1.3&#10;-------------&#10;Changes made :&#10;- Added SettingsManager&#10;- Updated LanguageManager &amp; associated methods &#10;- Fixed LanguageManager system&#10;- Fixed Options button&#10;- Fixed Volume setting&#10;- Fixed Language setting&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Continue OptionsView's settings&#10;- Continue MainGameView's interface&#10;- Start implement game logic&#10;- Start fill Player.kt">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/CharCreateView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/CharSelectView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/NewGame.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/NewGameView.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/PopUp.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/LanguageManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/LanguageManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Game.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainGameView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MainGameView.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainGameView.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainMenuView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MainMenuView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/OptionsView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/OptionsView.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fr_FR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fr_FR.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/settings.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/settings.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,8 +51,8 @@
         <option value="Class" />
         <option value="FxmlFile" />
         <option value="XML Properties File" />
-        <option value="Kotlin Class" />
         <option value="Kotlin File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -123,7 +125,8 @@
       <workItem from="1680063770505" duration="7324000" />
       <workItem from="1680093482477" duration="3365000" />
       <workItem from="1680098648233" duration="24419000" />
-      <workItem from="1680127433226" duration="12129000" />
+      <workItem from="1680127433226" duration="12532000" />
+      <workItem from="1680174390510" duration="10867000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1680048644131</created>
@@ -160,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680128154356</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Version 0.1.3&#10;-------------&#10;Changes made :&#10;- Added SettingsManager&#10;- Updated LanguageManager &amp; associated methods &#10;- Fixed LanguageManager system&#10;- Fixed Options button&#10;- Fixed Volume setting&#10;- Fixed Language setting&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Continue OptionsView's settings&#10;- Continue MainGameView's interface&#10;- Start implement game logic&#10;- Start fill Player.kt">
+      <created>1680140124849</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680140124849</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,7 +183,8 @@
     <MESSAGE value="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added styles.css&#10;- Added AudioManager&#10;- Added Game.kt for game logic&#10;- Added LanguageManager&#10;- Started creation of game interface&#10;- Started english translation&#10;- Exit button is now workable&#10;- Volume should now be workable&#10;- Difficulty mode have been deleted&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Start to fill Player.kt" />
     <MESSAGE value="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added styles.css&#10;- Added AudioManager&#10;- Added Game.kt for game logic&#10;- Added LanguageManager&#10;- Started creation of game interface&#10;- Started english translation&#10;- Exit button is now workable&#10;- Volume should now be workable&#10;- Difficulty mode have been deleted&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Continue game interface&#10;- Start to fill Player.kt" />
     <MESSAGE value="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added Const.kt&#10;- Added settings.properties&#10;- Converted language bundles into properties&#10;- Updated LanguageManager and associated files&#10;- &#10;&#10;Changes to do :&#10;- Fix LanguageManager and associated methods&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Continue game interface&#10;- Start to fill Player.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added Const.kt&#10;- Added settings.properties&#10;- Converted language bundles into properties&#10;- Updated LanguageManager and associated files&#10;- &#10;&#10;Changes to do :&#10;- Fix LanguageManager and associated methods&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Continue game interface&#10;- Start to fill Player.kt" />
+    <MESSAGE value="Version 0.1.3&#10;-------------&#10;Changes made :&#10;- Added SettingsManager&#10;- Updated LanguageManager &amp; associated methods &#10;- Fixed LanguageManager system&#10;- Fixed Options button&#10;- Fixed Volume setting&#10;- Fixed Language setting&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Continue OptionsView's settings&#10;- Continue MainGameView's interface&#10;- Start implement game logic&#10;- Start fill Player.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.1.3&#10;-------------&#10;Changes made :&#10;- Added SettingsManager&#10;- Updated LanguageManager &amp; associated methods &#10;- Fixed LanguageManager system&#10;- Fixed Options button&#10;- Fixed Volume setting&#10;- Fixed Language setting&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Continue OptionsView's settings&#10;- Continue MainGameView's interface&#10;- Start implement game logic&#10;- Start fill Player.kt" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

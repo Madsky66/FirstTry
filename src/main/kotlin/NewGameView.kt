@@ -1,14 +1,8 @@
-
 import LanguageManager.languageManager
 import tornadofx.*
 
-class MainMenuView : View("Main Menu") {
-    private val menuTitleText = languageManager.getProperty("mainmenu_title") ?: "Que voulez-vous faire ?"
-    private val newGameButtonText = languageManager.getProperty("new_game_text") ?: "Nouvelle partie"
-    private val loadGameButtonText = languageManager.getProperty("load_game_text") ?: "Charger partie"
-    private val optionsButtonText = languageManager.getProperty("options_text") ?: "Options"
-    private val exitButtonText = languageManager.getProperty("exit_text") ?: "Quitter"
-
+class NewGameView : View("New Game") {
+    private val menuTitle = languageManager.getProperty("newgame_title") ?: "DEBUG"
     override val root = borderpane {
         prefWidth = 800.0
         prefHeight = 600.0
@@ -17,38 +11,38 @@ class MainMenuView : View("Main Menu") {
                 padding = box(50.px)
                 alignment = javafx.geometry.Pos.CENTER
             }
-            label(menuTitleText) {
+            label(menuTitle) {
                 id = "menuTitle"
                 style { fontSize = 40.px }
             }
-            button(newGameButtonText) {
+            button("Mise à jour des textes") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                setOnAction {
-                    val gameView = find<NewGameView>()
-                    replaceWith(gameView)
-                }
+                action {updateLabels()}
             }
-            button(loadGameButtonText) {
+            button("Créer personnage") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
                 action {
-                    close()
-                    crash("Non implementé")
+                    val gameView = find<CharCreateView>()
+                    replaceWith(gameView)
                 }
             }
-            button(optionsButtonText) {
+            button("Choisir personnage") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                action {find<OptionsView>(OptionsView::currentMainMenuView to this@MainMenuView).openModal()}
+                action {
+                    val gameView = find<CharSelectView>()
+                    replaceWith(gameView)
+                }
             }
-            button(exitButtonText) {
+            button("Quitter") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
@@ -59,5 +53,10 @@ class MainMenuView : View("Main Menu") {
                 }
             }
         }
+    }
+
+    private fun updateLabels() {
+        //healthLabel.text = "Health : ${game.actualHealth}"
+        //dateLabel.text = "Date : ${game.lives}"
     }
 }

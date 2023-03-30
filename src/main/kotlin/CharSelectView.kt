@@ -1,14 +1,8 @@
-
 import LanguageManager.languageManager
 import tornadofx.*
 
-class MainMenuView : View("Main Menu") {
-    private val menuTitleText = languageManager.getProperty("mainmenu_title") ?: "Que voulez-vous faire ?"
-    private val newGameButtonText = languageManager.getProperty("new_game_text") ?: "Nouvelle partie"
-    private val loadGameButtonText = languageManager.getProperty("load_game_text") ?: "Charger partie"
-    private val optionsButtonText = languageManager.getProperty("options_text") ?: "Options"
-    private val exitButtonText = languageManager.getProperty("exit_text") ?: "Quitter"
-
+class CharSelectView : View("Create character") {
+    private val menuTitle = languageManager.getProperty("charselect_title") ?: "DEBUG"
     override val root = borderpane {
         prefWidth = 800.0
         prefHeight = 600.0
@@ -17,21 +11,11 @@ class MainMenuView : View("Main Menu") {
                 padding = box(50.px)
                 alignment = javafx.geometry.Pos.CENTER
             }
-            label(menuTitleText) {
+            label(menuTitle) {
                 id = "menuTitle"
                 style { fontSize = 40.px }
             }
-            button(newGameButtonText) {
-                style {
-                    prefWidth = 200.px
-                    fontSize = 20.px
-                }
-                setOnAction {
-                    val gameView = find<NewGameView>()
-                    replaceWith(gameView)
-                }
-            }
-            button(loadGameButtonText) {
+            button("Emplacement 1") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
@@ -41,21 +25,44 @@ class MainMenuView : View("Main Menu") {
                     crash("Non implementé")
                 }
             }
-            button(optionsButtonText) {
-                style {
-                    prefWidth = 200.px
-                    fontSize = 20.px
-                }
-                action {find<OptionsView>(OptionsView::currentMainMenuView to this@MainMenuView).openModal()}
-            }
-            button(exitButtonText) {
+            button("Emplacement 2") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
                 action {
                     close()
-                    crash("Fermeture du programme")
+                    crash("Non implementé")
+                }
+            }
+            button("Emplacement 3") {
+                style {
+                    prefWidth = 200.px
+                    fontSize = 20.px
+                }
+                action {
+                    close()
+                    crash("Non implementé")
+                }
+            }
+            button("Emplacement 4") {
+                style {
+                    prefWidth = 200.px
+                    fontSize = 20.px
+                }
+                action {
+                    close()
+                    crash("Non implementé")
+                }
+            }
+            button("Emplacement 5") {
+                style {
+                    prefWidth = 200.px
+                    fontSize = 20.px
+                }
+                action {
+                    close()
+                    crash("Non implementé")
                 }
             }
         }

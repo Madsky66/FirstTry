@@ -14,3 +14,4 @@ class Main : App(MainMenuView::class) {
     }
 }
 fun main(args: Array<String>) {launch<Main>(args)}
+fun crash(crashMessage: String) {PopUp(crashMessage).show()}
