@@ -1,6 +1,6 @@
 import java.time.LocalDateTime
 
-class NewGame() {
+class NewGame {
 
 
 

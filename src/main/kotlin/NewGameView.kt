@@ -56,6 +56,7 @@ class NewGameView : View("New Game") {
     }
 
     private fun updateLabels() {
+        TODO()
         //healthLabel.text = "Health : ${game.actualHealth}"
         //dateLabel.text = "Date : ${game.lives}"
     }

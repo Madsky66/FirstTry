@@ -4,7 +4,7 @@ import tornadofx.*
 
 class MainMenuView : View("Main Menu") {
     private val menuTitleText = languageManager.getProperty("mainmenu_title") ?: "Que voulez-vous faire ?"
-    private val newGameButtonText = languageManager.getProperty("new_game_text") ?: "Nouvelle partie"
+    private val newGameButtonText = languageManager.getProperty("newgame_text") ?: "Nouvelle partie"
     private val loadGameButtonText = languageManager.getProperty("load_game_text") ?: "Charger partie"
     private val optionsButtonText = languageManager.getProperty("options_text") ?: "Options"
     private val exitButtonText = languageManager.getProperty("exit_text") ?: "Quitter"
@@ -37,8 +37,9 @@ class MainMenuView : View("Main Menu") {
                     fontSize = 20.px
                 }
                 action {
-                    close()
-                    crash("Non implementé")
+                    GraphStreamer
+                    //close()
+                    //crash("Non implementé")
                 }
             }
             button(optionsButtonText) {

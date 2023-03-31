@@ -29,7 +29,7 @@ class CharCreateView : View("Create character") {
                                     hgrow = Priority.ALWAYS
                                     fieldset("Caractéristiques :") {
                                         alignment = Pos.TOP_LEFT
-                                        field("Age") { datepicker() {value = LocalDate.of(charModel.charBirthYear.value, charModel.charBirthMonth.value, charModel.charBirthDay.value)}}
+                                        field("Age") { datepicker {value = LocalDate.of(charModel.charBirthYear.value, charModel.charBirthMonth.value, charModel.charBirthDay.value)}}
                                         field("Taille [cm]") { spinner(0.0, 300.0, 150.0, 1.0, true, charModel.charHeight) }
                                         field("Poids [kg]") { spinner(0.0, 200.0, 50.0, 0.5, true, charModel.charWeight) }
                                         field("Sexe[s]") { textfield(charModel.charSex) }
