@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d84cb1ab-2a74-4e38-a364-38c4542e4a70" name="Changes" comment="Version 0.1.3&#10;-------------&#10;Changes made :&#10;- Added SettingsManager&#10;- Updated LanguageManager &amp; associated methods &#10;- Fixed LanguageManager system&#10;- Fixed Options button&#10;- Fixed Volume setting&#10;- Fixed Language setting&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Continue OptionsView's settings&#10;- Continue MainGameView's interface&#10;- Start implement game logic&#10;- Start fill Player.kt">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/CharCreateView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/CharSelectView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/NewGame.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/NewGameView.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/PopUp.kt" afterDir="false" />
+    <list default="true" id="d84cb1ab-2a74-4e38-a364-38c4542e4a70" name="Changes" comment="Version 0.1.5&#10;-------------&#10;Changes made :&#10;- Added Maths &amp; Styles classes&#10;- Added CharacterModel class&#10;- Started CharConfirmView&#10;- Updated CharCreate forms interface&#10;- Exit button replaced with Back button in NewGameView&#10;&#10;Changes to do :&#10;- Add Firstnames and Races lists&#10;- Integrate lists into code&#10;- Finalize CharCreate forms interfaces&#10;- Continue OptionsView's settings&#10;- Add Full-Screen toggle in OptionsView">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Game.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainGameView.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainMenuView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MainMenuView.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fr_FR.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fr_FR.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/NewGameView.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/NewGameView.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,11 +39,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TornadoFX Code View" />
         <option value="Class" />
         <option value="FxmlFile" />
         <option value="XML Properties File" />
         <option value="Kotlin File" />
+        <option value="TornadoFX Code View" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -101,12 +93,21 @@
       <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main\resources\bundles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main\resources" />
       <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main" />
+      <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main\resources" />
       <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main\kotlin" />
       <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main\views" />
       <recent name="C:\Users\Pierr\IdeaProjects\FirstTry\src\main\kotlin\views" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="FirstTry" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="FirstTry.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -126,7 +127,9 @@
       <workItem from="1680093482477" duration="3365000" />
       <workItem from="1680098648233" duration="24419000" />
       <workItem from="1680127433226" duration="12532000" />
-      <workItem from="1680174390510" duration="10867000" />
+      <workItem from="1680174390510" duration="41515000" />
+      <workItem from="1680265919366" duration="9050000" />
+      <workItem from="1680294848241" duration="2471000" />
     </task>
     <task id="LOCAL-00001" summary="Base">
       <created>1680048644131</created>
@@ -170,7 +173,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680140124849</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Version 0.1.4&#10;-------------&#10;Changes made :&#10;- Added CharCreate &amp; CharSelect views&#10;- Added NewGame view&#10;- Added PopUps&#10;- Added crash popups &amp; debug default values&#10;- Started implement game logic&#10;- Started CharCreate interface&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Continue CharCreate forms interfaces&#10;- Continue OptionsView's settings&#10;- Start Load and Save game system&#10;- Start Load and Save char system&#10;- Start fill Player.kt">
+      <created>1680189991018</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680189991018</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Version 0.1.5&#10;-------------&#10;Changes made :&#10;- Added Maths &amp; Styles classes&#10;- Added CharacterModel class&#10;- Started CharConfirmView&#10;- Updated CharCreate forms interface&#10;- Exit button replaced with Back button in NewGameView&#10;&#10;Changes to do :&#10;- Add Firstnames and Races lists&#10;- Integrate lists into code&#10;- Finalize CharCreate forms interfaces&#10;- Continue OptionsView's settings&#10;- Add Full-Screen toggle in OptionsView">
+      <created>1680231113353</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1680231113353</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -184,7 +201,9 @@
     <MESSAGE value="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added styles.css&#10;- Added AudioManager&#10;- Added Game.kt for game logic&#10;- Added LanguageManager&#10;- Started creation of game interface&#10;- Started english translation&#10;- Exit button is now workable&#10;- Volume should now be workable&#10;- Difficulty mode have been deleted&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Continue game interface&#10;- Start to fill Player.kt" />
     <MESSAGE value="Version 0.1.1&#10;-------------&#10;Changes made :&#10;- Added Const.kt&#10;- Added settings.properties&#10;- Converted language bundles into properties&#10;- Updated LanguageManager and associated files&#10;- &#10;&#10;Changes to do :&#10;- Fix LanguageManager and associated methods&#10;- Add Full-Screen toggle in OptionsView&#10;- Finalize OptionsView's settings&#10;- Continue game interface&#10;- Start to fill Player.kt" />
     <MESSAGE value="Version 0.1.3&#10;-------------&#10;Changes made :&#10;- Added SettingsManager&#10;- Updated LanguageManager &amp; associated methods &#10;- Fixed LanguageManager system&#10;- Fixed Options button&#10;- Fixed Volume setting&#10;- Fixed Language setting&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Continue OptionsView's settings&#10;- Continue MainGameView's interface&#10;- Start implement game logic&#10;- Start fill Player.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.1.3&#10;-------------&#10;Changes made :&#10;- Added SettingsManager&#10;- Updated LanguageManager &amp; associated methods &#10;- Fixed LanguageManager system&#10;- Fixed Options button&#10;- Fixed Volume setting&#10;- Fixed Language setting&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Continue OptionsView's settings&#10;- Continue MainGameView's interface&#10;- Start implement game logic&#10;- Start fill Player.kt" />
+    <MESSAGE value="Version 0.1.4&#10;-------------&#10;Changes made :&#10;- Added CharCreate &amp; CharSelect views&#10;- Added NewGame view&#10;- Added PopUps&#10;- Added crash popups &amp; debug default values&#10;- Started implement game logic&#10;- Started CharCreate interface&#10;&#10;Changes to do :&#10;- Add Full-Screen toggle in OptionsView&#10;- Continue CharCreate forms interfaces&#10;- Continue OptionsView's settings&#10;- Start Load and Save game system&#10;- Start Load and Save char system&#10;- Start fill Player.kt" />
+    <MESSAGE value="Version 0.1.5&#10;-------------&#10;Changes made :&#10;- Added Maths &amp; Styles classes&#10;- Added CharacterModel class&#10;- Started CharConfirmView&#10;- Updated CharCreate forms interface&#10;- Exit button replaced with Back button in NewGameView&#10;&#10;Changes to do :&#10;- Add Firstnames and Races lists&#10;- Integrate lists into code&#10;- Finalize CharCreate forms interfaces&#10;- Continue OptionsView's settings&#10;- Add Full-Screen toggle in OptionsView" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.1.5&#10;-------------&#10;Changes made :&#10;- Added Maths &amp; Styles classes&#10;- Added CharacterModel class&#10;- Started CharConfirmView&#10;- Updated CharCreate forms interface&#10;- Exit button replaced with Back button in NewGameView&#10;&#10;Changes to do :&#10;- Add Firstnames and Races lists&#10;- Integrate lists into code&#10;- Finalize CharCreate forms interfaces&#10;- Continue OptionsView's settings&#10;- Add Full-Screen toggle in OptionsView" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -201,6 +220,11 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="((CharCreateView)this).charModel$delegate" custom="CharCreateView" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

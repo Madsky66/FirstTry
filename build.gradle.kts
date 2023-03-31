@@ -22,10 +22,13 @@ javafx {
 dependencies {
     implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation(kotlin("stdlib-jdk8"))
-    implementation("no.tornado:tornadofx:1.7.20")
+
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-javafx:1.5.2")
     implementation("org.openjfx:javafx-controls:19.0.2.1")
+    implementation("no.tornado:tornadofx:1.7.20")
+
+    implementation("org.graphstream:gs-core:2.0")
 
     testImplementation("junit:junit:4.13.2")
     testImplementation(kotlin("test"))

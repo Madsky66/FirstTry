@@ -42,14 +42,14 @@ class NewGameView : View("New Game") {
                     replaceWith(gameView)
                 }
             }
-            button("Quitter") {
+            button("Retour") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
                 action {
-                    close()
-                    crash("Fermeture du programme")
+                    val gameView = find<MainMenuView>()
+                    replaceWith(gameView)
                 }
             }
         }
