@@ -26,7 +26,7 @@ class MainMenuView : View("Main Menu") {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                setOnAction {
+                action {
                     val gameView = find<NewGameView>()
                     replaceWith(gameView)
                 }

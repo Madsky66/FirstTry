@@ -14,11 +14,13 @@ repositories {
 
 tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {kotlinOptions.jvmTarget = "1.8"}
 
-
-
-javafx { modules = listOf("javafx.controls", "javafx.fxml", "javafx.graphics") }
+javafx {
+    version = "11.0.2"
+    modules = listOf("javafx.controls", "javafx.fxml", "javafx.graphics")
+}
 
 dependencies {
+    implementation(platform("org.jetbrains.kotlin:kotlin-bom"))
     implementation(kotlin("stdlib-jdk8"))
     implementation("no.tornado:tornadofx:1.7.20")
     implementation("org.jetbrains.kotlin:kotlin-stdlib")
