@@ -37,7 +37,12 @@ class MainMenuView : View("Main Menu") {
                     fontSize = 20.px
                 }
                 action {
-                    GraphStreamer
+                    val gameView = find<JSONManipulatorView>()
+                    replaceWith(gameView)
+
+                    //val gameView = JSONManipulatorView()
+                    //gameView.openWindow()
+
                     //close()
                     //crash("Non implementé")
                 }
@@ -54,10 +59,7 @@ class MainMenuView : View("Main Menu") {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                action {
-                    close()
-                    crash("Fermeture du programme")
-                }
+                action {confirm("Confirmation", "Voulez-vous vraiment quitter ?") {close()}}
             }
         }
     }

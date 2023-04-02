@@ -1,6 +1,6 @@
 import tornadofx.*
 
-class Styles : Stylesheet() {
+class Styles_ToDo : Stylesheet() {
     init {
         label {
         }

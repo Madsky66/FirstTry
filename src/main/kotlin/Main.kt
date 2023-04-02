@@ -13,5 +13,8 @@ class Main : App(MainMenuView::class) {
         stage.isFullScreen = true
     }
 }
-fun main(args: Array<String>) {launch<Main>(args)}
+fun main(args: Array<String>) {
+    launch<Main>(args)
+    System.setProperty("org.graphstream.ui", "javafx")
+}
 fun crash(crashMessage: String) {PopUp(crashMessage).show()}
