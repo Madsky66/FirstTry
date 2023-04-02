@@ -1,3 +1,5 @@
+import Managers.LanguageManager
+import Managers.SettingsManager
 import javafx.stage.Stage
 import tornadofx.*
 

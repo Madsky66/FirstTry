@@ -1,5 +1,5 @@
 
-import LanguageManager.languageManager
+import Managers.LanguageManager.languageManager
 import tornadofx.*
 
 class MainMenuView : View("Main Menu") {

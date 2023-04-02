@@ -1,4 +1,6 @@
-import SettingsManager.settingsManager
+package Managers
+
+import Managers.SettingsManager.settingsManager
 import java.io.FileInputStream
 import java.util.*
 
@@ -9,10 +11,9 @@ object LanguageManager {
         SettingsManager.load()
         val currentLanguage = settingsManager.getProperty("language", "fr_FR").toString()
         if (currentLanguage == "french") {languageInputStream = "src/main/resources/fr_FR.properties"}
-        if (currentLanguage == "english") {languageInputStream = "src/main/resources/en_EN.properties"}
-    }
+        if (currentLanguage == "english") {languageInputStream = "src/main/resources/en_EN.properties"}}
     fun load() {
         check()
-        FileInputStream(languageInputStream).use {languageManager.load(it)}
+        FileInputStream(languageInputStream).use { languageManager.load(it)}
     }
 }
