@@ -1,5 +1,4 @@
-
-import Managers.LanguageManager.languageManager
+import LanguageManager.languageManager
 import tornadofx.*
 
 class MainMenuView : View("Main Menu") {
@@ -9,7 +8,7 @@ class MainMenuView : View("Main Menu") {
     private val optionsButtonText = languageManager.getProperty("options_text") ?: "Options"
     private val exitButtonText = languageManager.getProperty("exit_text") ?: "Quitter"
 
-    override val root = borderpane {
+        override val root = borderpane {
         prefWidth = 800.0
         prefHeight = 600.0
         center = vbox(20) {

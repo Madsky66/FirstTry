@@ -1,3 +1,5 @@
+package todos
+
 import tornadofx.*
 
 class Styles_ToDo : Stylesheet() {

@@ -1,4 +1,3 @@
-
 import javafx.geometry.Pos
 import javafx.scene.control.TabPane
 import javafx.scene.layout.Priority

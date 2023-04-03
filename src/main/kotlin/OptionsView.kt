@@ -1,7 +1,4 @@
-
-import Managers.AudioManager
-import Managers.SettingsManager
-import Managers.SettingsManager.settingsManager
+import SettingsManager.settingsManager
 import javafx.beans.property.SimpleStringProperty
 import tornadofx.*
 

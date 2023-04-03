@@ -1,4 +1,3 @@
-package Managers
 import javax.sound.sampled.AudioSystem
 import javax.sound.sampled.BooleanControl
 import javax.sound.sampled.FloatControl

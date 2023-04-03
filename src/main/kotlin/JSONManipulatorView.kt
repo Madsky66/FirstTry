@@ -14,7 +14,7 @@ class JSONManipulatorView : View("My View") {
             hbox {
                 fieldset() {
                     val requete = textfield()
-                    button("Tester la Database") {action {taxonSearch(requete.text).toString()}}
+                    button("Tester la Database") {action { taxonSearch(requete.text).toString()}}
                 }
                 vbox {
                     fieldset("Ajouter une branche") {

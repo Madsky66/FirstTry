@@ -26,7 +26,7 @@ plugins {
 }
 
 javafx {
-    version = "11.0.2"
+    version = "11"
     modules = listOf("javafx.controls", "javafx.fxml", "javafx.graphics")
 }
 

@@ -22,7 +22,7 @@ class CharConfirmView : View("Character Confirmation") {
                 button("Save") {
                     action {
                         close()
-                        crash("Sauvegarde effectuée ! [Non disponible]")
+                        pop(CRASH)
                     }
                 }
             }

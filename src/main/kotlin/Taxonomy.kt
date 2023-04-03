@@ -1,3 +1,4 @@
+
 import io.ktor.client.*
 import io.ktor.client.engine.cio.*
 import io.ktor.client.plugins.*
@@ -56,6 +57,6 @@ class Taxonomy {
 fun taxonSearch(requete: String?) = runBlocking {
     val taxonomy = Taxonomy()
     requete?.let {taxonomy.searchARN(it)}?.forEach { organism -> item = "Nom scientifique: ${organism.nomScientifique}\n----------------------------------------------------"}
-    val message = "$requete :\n\n$item"
-    crash(message)
+    //val message = "$requete :\n\n$item"
+    pop(CUSTOM) // Créer la popup de Taxonomie
 }

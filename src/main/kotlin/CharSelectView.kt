@@ -1,4 +1,4 @@
-import Managers.LanguageManager.languageManager
+import LanguageManager.languageManager
 import tornadofx.*
 
 class CharSelectView : View("Create character") {
@@ -20,50 +20,35 @@ class CharSelectView : View("Create character") {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                action {
-                    close()
-                    crash("Non implementé")
-                }
+                action {pop(TODO)}
             }
             button("Emplacement 2") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                action {
-                    close()
-                    crash("Non implementé")
-                }
+                action {pop(TODO)}
             }
             button("Emplacement 3") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                action {
-                    close()
-                    crash("Non implementé")
-                }
+                action {pop(TODO)}
             }
             button("Emplacement 4") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                action {
-                    close()
-                    crash("Non implementé")
-                }
+                action {pop(TODO)}
             }
             button("Emplacement 5") {
                 style {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                action {
-                    close()
-                    crash("Non implementé")
-                }
+                action {pop(TODO)}
             }
         }
     }

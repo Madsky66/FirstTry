@@ -1,5 +1,4 @@
-import Managers.LanguageManager
-import Managers.SettingsManager
+
 import javafx.stage.Stage
 import tornadofx.*
 
@@ -16,7 +15,6 @@ class Main : App(MainMenuView::class) {
     }
 }
 fun main(args: Array<String>) {
-    launch<Main>(args)
     System.setProperty("org.graphstream.ui", "javafx")
+    launch<Main>(args)
 }
-fun crash(crashMessage: String) {PopUp(crashMessage).show()}

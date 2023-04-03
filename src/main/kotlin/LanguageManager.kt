@@ -1,6 +1,4 @@
-package Managers
-
-import Managers.SettingsManager.settingsManager
+import SettingsManager.settingsManager
 import java.io.FileInputStream
 import java.util.*
 
