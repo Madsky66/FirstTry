@@ -35,16 +35,7 @@ class MainMenuView : View("Main Menu") {
                     prefWidth = 200.px
                     fontSize = 20.px
                 }
-                action {
-                    val gameView = find<JSONManipulatorView>()
-                    replaceWith(gameView)
-
-                    //val gameView = JSONManipulatorView()
-                    //gameView.openWindow()
-
-                    //close()
-                    //crash("Non implementé")
-                }
+                action {ViewManager().openView(ChatController::class, "Chat", "/ChatView.fxml")}
             }
             button(optionsButtonText) {
                 style {

@@ -1,4 +1,3 @@
-
 import javafx.stage.Stage
 import tornadofx.*
 
