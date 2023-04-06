@@ -1,12 +1,13 @@
+/*
 import javafx.geometry.Pos
 import tornadofx.*
 
 var item: String = ""
 class JSONManipulatorView : View("My View") {
-    /*private val addedBranches: ObservableList<Pair<String, String>> = FXCollections.observableArrayList()
+    private val addedBranches: ObservableList<Pair<String, String>> = FXCollections.observableArrayList()
     private var taxonomyFile = File("src/main/kotlin/classification.json")
     private val json = Json { ignoreUnknownKeys = true }
-    private var taxonomy = loadTaxonomy()*/
+    private var taxonomy = loadTaxonomy()
     override val root = borderpane {
         prefWidth = 800.0
         prefHeight = 600.0
@@ -22,12 +23,12 @@ class JSONManipulatorView : View("My View") {
                         val branchField = textfield("ID Enfant[s]")
                         button("Ajouter") {
                             action {
-                                /*val parentId = parentField.text
+                                val parentId = parentField.text
                                 val childId = branchField.text
                                 val parentNode = taxonomy.findNodeById(parentId)
                                 parentNode?.addChild(Taxon(childId))
                                 addedBranches.add(Pair(parentId, childId))
-                                savePreview()*/
+                                savePreview()
                             }
                         }
 
@@ -36,21 +37,23 @@ class JSONManipulatorView : View("My View") {
                         val removeField = textfield("Branch ID")
                         button("Remove Branch") {
                             action {
-                                /*val branchId = removeField.text
-                                taxonomy.removeNodeById(branchId)*/
+                                val branchId = removeField.text
+                                taxonomy.removeNodeById(branchId)
                             }
                         }
                     }
                     hbox {
                         alignment = Pos.CENTER
-                        button("Afficher la taxonomie") {action {/*showTaxonomyPopup()*/}}
+                        button("Afficher la taxonomie") {action {*/
+/*showTaxonomyPopup()*//*
+}}
                         button("Enregistrer") {
                             action {
-                                //saveTaxonomy()
+                                saveTaxonomy()
                                 close()
                             }
                         }
-                        /*listview(addedBranches) {
+                        listview(addedBranches) {
                             cellFormat {
                                 graphic = HBox().apply {
                                     children.addAll(
@@ -60,13 +63,13 @@ class JSONManipulatorView : View("My View") {
                                     )
                                 }
                             }
-                        }*/
+                        }
                     }
                 }
             }
         }
     }
-    /*private fun loadTaxonomy() = json.decodeFromString<Taxonomy>(taxonomyFile.readText())
+    private fun loadTaxonomy() = json.decodeFromString<Taxonomy>(taxonomyFile.readText())
     private fun savePreview() {
         taxonomyFile = File("src/main/kotlin/classification_preview.json")
         saveTaxonomy()
@@ -83,5 +86,5 @@ class JSONManipulatorView : View("My View") {
         alert.headerText = null
         alert.contentText = taxonomyText
         alert.showAndWait()
-    }*/
-}
+    }
+}*/
